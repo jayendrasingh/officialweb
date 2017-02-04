@@ -1,0 +1,132 @@
+@media (max-width: 600px) {
+  .hideOnMobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+html {
+  #background: url('../images/background_01.jpg') no-repeat center center fixed;
+  background: #7F9FF6 no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	font-family: cursive;
+	color : black;
+	padding : 10px;
+}
+
+p {
+	font-size: 18px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    font-size: 12px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    height: 20px;
+    z-index: 2;
+}
+
+div {
+   # border: 5px solid #B22222;
+    margin: 5px;
+}
+
+h1 {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size: 25px;
+}
+
+h1:hover {
+    background-color: #0C136D;
+    color: white;
+}
+.topMenuContainer {
+    float: left;
+    position: relative;
+    width: 100%;
+    top: 70px;
+}
+
+.browseMenuContainer {
+    float: left;
+    position: relative;
+    top: 65px;
+    width: 20%;
+    margin-right: 15px;
+}
+
+.topMenuButton {
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-right: 5px;
+    width: 16%;
+    height: 60px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 14px;
+}
+.topMenuButton:hover {
+    background-color: #0C136D;
+    color: white;
+    font-size: 16px;
+}
+
+.browseMenuButton {
+    float: left;
+    position: relative;
+    margin-bottom: 5px;
+    height: 60px;
+    width: 80%;
+}
+
+.buttonImage {
+    height: 15px;
+    width: 15px;
+}
+
+.animatedLogo {
+    height: 160px;
+    width: 75%;
+    margin-top: 5px;
+    border: 5px ridge #4E5AF7;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.animatedLogo:hover {
+    border: 5px ridge #0C136D;
+}
+
+.buttonText {
+
+}
+
+.contentContainer {
+    #background: #1823BC;
+    float: left;
+    position: relative;
+    top: 90px;
+    width: 75%;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.contentContainer:hover {
+    color: #0C136D;
+    font-size: 19px;
+}

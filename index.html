@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>Dream Weavers</title>
+	<meta http-equiv="content-type" content="text/html">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<link rel="icon" type="image/jpg" href="./assets/images/title_icon.png">
+	<link rel="apple-touch-icon" sizes="64x64" href="./assets/images/title_icon.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jayendra Singh">
+	<meta name="description" content="Jayendra Singh - Software Solution Developer, Web Designer and Developer">
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./assets/css/main.css" >
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript">
+		var mainModel = {
+			contentArray : [
+			{
+				text : "I strongly disagree with the avoidance of naked class selectors. In all my years of CSS, I have never had a problem with naming two conceptually distinct classes the same. If you do, then a) you can easily change one name and b) specifying element names will not solve the problem, merely make it less predictable, and by extension, harder to diagnose and solve, because most of the time, the elements won't match, so the bug will only show up some of the time. The real problem is using class names like \"center\""
+			},
+			{
+				text : "gallery"
+			},
+			{
+				text : "contact"
+			},
+			{
+				text : "I have to agree partially with both cletus and Thom. First off, classes like \"center\" describe how it should look, not what it is, and should be avoided. Semantic class names like \"content\" are a far better choice. Now, as to using broad (or \"naked\") selectors, I have to agree with cletus -- it really is a recipe for disaster. Firebug has made identifying the bugs easier, but if you have ten <div> s each with a different semantic meaning, then each one should have it's own class. If they share display properties, then use a multiple selector (e.g. div.content, div.author_name { } ). To relate this to your question you'd basically leverage multiple class names for maximum reusability. Granted ie6 doesn't support chained selectors (class1.class2.class3), but it's still a neat trick!"
+			},
+			{
+				text : "Think of your html element or widget/module (group of nested html elements) as an object. You know you're going to have objects that share the same properties so you'll want to create a reusable class they can utilize."
+			},
+			{
+				text : "Say your module is a message (error, flash...). So you \"extend\" or \"include\" your .baseModule class because all messages will be center aligned (see final html example)."
+			},
+			{
+				text : "Web Designing 4"
+			}
+			],
+			onClick : function( clickedInx ) {
+				if( clickedInx >= 0 && clickedInx <= 6) {
+					var temp = mainModel.contentArray[ clickedInx ].text;
+					document.getElementById("contentText").innerHTML = temp;
+					return temp;
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Dream Weaver Solutions</h1>
+	</header>
+	<div class="topMenuContainer">
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(0)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Home">
+			<span class="buttonText hideOnMobile">Home</span>
+		</button>
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(1)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Gallery">
+			<span class="buttonText hideOnMobile">Gallery</span>
+		</button>
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(2)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Contact">
+			<span class="buttonText hideOnMobile">Contact</span>
+		</button>
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(3)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Web Designing 1">
+			<span class="buttonText hideOnMobile">Web Designing 1</span>
+		</button>
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(4)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Web Designing 2">
+			<span class="buttonText hideOnMobile">Web Designing 2</span>
+		</button>
+		<button class="topMenuButton" type="button" onclick="mainModel.onClick(5)" >
+			<img class="buttonImage" src="./assets/images/title_icon.png" alt="Web Designing 3">
+			<span class="buttonText hideOnMobile">Web Designing 3</span>
+		</button>
+	</div>
+	<div class="browseMenuContainer" >
+			<img class="animatedLogo" src="./assets/images/webDesign.gif" alt="Web Designing 4">
+		</button>
+	</div>
+	<div class="contentContainer" >
+		<span id="contentText"></span>
+	</div>
+
+	<footer>Has to write something in footer ! hmm..</footer>
+	<script type="text/javascript">
+		document.getElementById("contentText").innerHTML = mainModel.contentArray[0].text;
+	</script>
+</body>
+</html>
